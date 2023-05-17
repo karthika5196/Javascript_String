@@ -93,3 +93,42 @@ function camelCase(str) {
   );
 }
 camelCase('Javascript exercise');
+
+//Sol 11: uncommelize a string
+function unCommalize(str, separator) {
+  if (typeof separator == 'undefined') {
+    separator = ' ';
+  }
+  var str = str.replace(/[A-Z]/g, function (letter) {
+    console.log(letter);
+    return separator + letter.toLowerCase();
+  });
+  console.log(str);
+  return str.replace('/^' + separator + '/', '');
+}
+console.log(unCommalize('helloWorld', '_'));
+
+//Sol 12: concatenate a given string n times
+function repeat(str, n) {
+  if (n == undefined) {
+    n = 1;
+  }
+  return str.repeat(n);
+}
+console.log(repeat('hai', 4));
+
+//Sol 13:  insert a string within a string at a particular position (default is 1)
+
+function insert(str, ins_str, position) {
+  if (position == undefined) {
+    position = 0;
+  }
+  if (ins_str == undefined) {
+    ins_str = ' ';
+  }
+  return str.slice(0, position) + ins_str + str.slice(position);
+}
+console.log(insert('we are doing some exercise ', 'javascript '));
+
+
+
