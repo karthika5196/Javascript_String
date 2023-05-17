@@ -34,3 +34,19 @@ function last(arr, n) {
   console.log(arr.slice(-n));
 }
 last([7, 9, 10, 14, 34, 56]);
+
+//Sol 5: join all elements of the following array into a string
+
+const arr = ['Red', 'Green', 'White', 'Black'];
+console.log(arr.toString());
+console.log(arr.join());
+console.log(arr.join('+'));
+
+//Sol 6: accepts a number as input and inserts dashes (-) between each even number.
+let num = 257964;
+let numToStr = num.toString();
+let str = '';
+for (let i = 0; i < numToStr.length; i++) {
+  if (numToStr[i] % 2 == 0 && numToStr[i + 1] % 2 == 0) {
+  }
+}
