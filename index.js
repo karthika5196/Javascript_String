@@ -53,3 +53,37 @@ console.log(fizzBuzz(18));
 
 function isHappyNumber(num) {}
 console.log(isHappyNumber(49));
+
+//Sol 6: find the Armstrong numbers of 3 digits
+
+function checkArmstrong(num) {
+  var sum = 0;
+  var n, m;
+  let i = 0;
+  var num1 = num;
+  while (i < 3) {
+    n = num1 % 10;
+    m = Math.floor(n);
+    sum += Math.pow(m, 3);
+    num1 = (num1 - 1) / 10;
+    i++;
+  }
+  console.log(sum, num, m);
+  return sum == num;
+}
+
+console.log(checkArmstrong(371));
+//Sol 7: compute the greatest common divisor (GCD) of two positive integers.
+var a = 489; //First number
+var b = 458; //Second number
+var gcd;
+
+while (a != b) {
+  if (a > b) {
+    a = a - b;
+  } else {
+    b = b - a;
+  }
+}
+gcd = a;
+console.log(gcd);
